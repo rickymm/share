@@ -1,0 +1,62 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="fundo-externo">
+			<div id="fundo">
+			</div>
+	<div id="site">	
+		<br>
+		<center>
+		<img src="./img/citelum_logo_600.png" title="Citelum S/A"  height="100"/>
+			<br><br><br><br>
+			<h2><center> Mais que idéias, criamos soluções </center></h2>
+		    <br>
+		    <p align="justify"> Para agilizar o nosso trabalho a GTIN disponibiliza para você este serviço que permitirá sem nossa intervenção o 
+		    carregamento e compartilhamento de grandes arquivos. Com esta ferramenta você pode: 
+		    </p>
+		<ul align="left">
+			<li> Enviar arquivos com até 700Mb
+			<li> Enviar os diversos tipos de extensões de arquivos com segurança
+			<li> O arquivo fica disponível por 15 dias
+			<li> Os arquivo carregados são notificados à GTIN, garantindo nossa segurança
+		</ul>
+	
+		<br>
+		<br>
+				
+		<div style="display: none;" id="loader_img"> Carregando arquivo...<br>
+		<img src="./img/carregando.gif"/>
+
+	     
+	</div>
+		<div style="display: none;" id="upload_msg"></div>
+		<div>
+		<p>
+		<label>		
+            <label for="txtLogin" class="col-lg-2 control-label">Usuário: </label>	
+            <asp:TextBox runat="server" ID="txtLogin"></asp:TextBox>
+            <label for="txtSenha" class="col-lg-2 control-label">Senha: </label>
+            <asp:TextBox runat="server" ID="txtSenha" TextMode="Password"></asp:TextBox>
+		</label>			                        
+		</p>
+        <p>
+        </p>
+        <p>
+            <asp:Button runat="server" ID="btnLogin" Text="Login" CssClass="but but-shadow but-rc" OnClick="btnLogin_Click" />
+        </p>
+	</div>		
+	            </center>
+	            <center>
+			</div>
+		</div>
+    </form>
+</body>
+</html>
